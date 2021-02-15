@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import * as common from '../common';
 
 Rails.start()
 Turbolinks.start()
@@ -19,4 +20,7 @@ $(document).on('turbolinks:load', function() {
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
+  
+  common.submit_message()
+  common.scroll_bottom()
 })
