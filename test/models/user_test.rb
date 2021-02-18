@@ -2,7 +2,7 @@ require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
   test "valid user" do
-    user = User.new(username: 'John', password: 'password')
+    user = users(:valid)
     assert user.valid?
   end
 
