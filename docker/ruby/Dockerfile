@@ -13,7 +13,7 @@ RUN npm install -g yarn
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 
-ENV BUNDLER_VERSION 2.2.7
+ENV BUNDLER_VERSION 2.1.4
 RUN gem update --system --quiet \
     && gem install bundler -v $BUNDLER_VERSION --quiet
 
