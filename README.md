@@ -1,4 +1,5 @@
 # Rails Chat 💻💎
+![Ruby](https://github.com/mouradev/rails_chat/workflows/Ruby/badge.svg)
 
 A simple real time chat made in Ruby on Rails and Action Cable.
 
