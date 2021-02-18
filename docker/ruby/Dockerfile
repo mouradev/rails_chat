@@ -1,4 +1,4 @@
-FROM ruby:2.5.1
+FROM ruby:2.7.2
 
 RUN apt-get update -qq &&\
     apt-get -y install curl &&\

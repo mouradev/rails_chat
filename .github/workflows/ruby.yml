@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.5.1']
+        ruby-version: ['2.5.1', '2.7.2']
 
     steps:
     - uses: actions/checkout@v2
@@ -35,7 +35,7 @@ jobs:
       run: gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
     - name: Install Dependencies
       run: bundle install
-    - name: Run migrations 
+    - name: Run migrations
       run: bundle exec rails db:migrate RAILS_ENV=test
     - name: Run tests
       run: bundle exec rails test
