@@ -3,8 +3,8 @@
   Say Something
 </h4>
 
-<div class="ui two column grid">
-  <div class="twelve wide column">
+<div class="ui grid">
+  <div class="wide column">
     <div class="ui fluid raised card chatbox">
       <div class="content"  id="messages">
         <div class="ui feed"  id="message-container">
@@ -15,29 +15,11 @@
         <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |f| %>
           <div class="field">
             <div class="ui fluid icon input">
-              <%= f.text_field :body %>
+              <%= f.text_field :body, placeholder: 'Type here...' %>
               <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
             </div>
           </div>
         <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="four wide column">
-    <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <div class="ui inverted vertical menu">
-          <a class="active item">
-            Home
-          </a>
-          <a class="item">
-            Messages
-          </a>
-          <a class="item">
-            Friends
-          </a>
-        </div>
       </div>
     </div>
   </div>
